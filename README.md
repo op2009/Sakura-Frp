@@ -1,4 +1,4 @@
-# frps
+# Sakura-Frp 一键安装卸载脚本
 ## 项目简介
 基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透服务端 frps 的一键安装卸载脚本支持 Linux 服务器等多种环境安装部署.
 

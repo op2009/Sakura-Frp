@@ -6,10 +6,6 @@
 - Docker [stilleshan/frps](https://hub.docker.com/r/stilleshan/frps)
 > *docker image support for X86 and ARM*
 
-## 更新
-**2021-05-31** 更新国内镜像方便使用  
-**2021-05-31** 更新 Linux 一键安装脚本同时支持 X86 和 ARM  
-**2021-05-29** 更新从`0.36.2`版本起 docker 镜像同时支持 X86 和 ARM
 
 ## 使用说明
 由于 frps 服务端需要配置参数,本脚本为原版 frps.ini ,安装完毕后请自行编辑 frps.ini 配置端口,密码等相关参数并重启服务.同时你也可以 fork 本仓库后自行修改 frps.ini ,在进行一键安装也非常方便.后期也可自行配置 frps.ini 和调整 frps 的版本.

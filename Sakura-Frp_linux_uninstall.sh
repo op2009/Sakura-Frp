@@ -13,7 +13,7 @@ Font="\033[0m"
 
 # variable
 WORK_PATH=$(dirname $(readlink -f $0))
-FRP_NAME=Sakura-Frp
+FRP_NAME=frps
 FRP_VERSION=0.28.2
 FRP_PATH=/usr/local/frp
 

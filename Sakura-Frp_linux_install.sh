@@ -65,7 +65,7 @@ echo -e "${Green}安装成功,请先修改 ${FRP_NAME}.ini 文件,确保格式�
 echo -e "${Red}vi /usr/local/frp/${FRP_NAME}.ini${Font}"
 echo -e "${Green}修改完毕后执行以下命令重启服务:${Font}"
 echo -e "${Red}sudo systemctl restart ${FRP_NAME}${Font}"
-echo -e "${Red}=======================frps相关命令====================================${Font}"
+echo -e "${Red}=======================frps相关命令==================================${Font}"
 echo -e "${Green}启动服务:${Font}"
 echo -e "${Red}sudo systemctl start ${FRP_NAME}${Font}"
 echo -e "${Green}开机自启:${Font}"

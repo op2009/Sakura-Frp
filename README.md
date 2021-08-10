@@ -1,10 +1,9 @@
 # frps
 ## 项目简介
-基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透服务端 frps 的一键安装卸载脚本和 docker 镜像.支持 Linux 服务器和 docker 等多种环境安装部署.
+基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透服务端 frps 的一键安装卸载脚本支持 Linux 服务器等多种环境安装部署.
 
-- GitHub [stilleshan/frps](https://github.com/stilleshan/frps)
-- Docker [stilleshan/frps](https://hub.docker.com/r/stilleshan/frps)
-> *docker image support for X86 and ARM*
+- GitHub [ZeroDream-CN/SakuraFrp](https://github.com/ZeroDream-CN/SakuraFrp)
+> *support for X86 and ARM*
 
 
 ## 使用说明
@@ -13,9 +12,7 @@
 ### 一键脚本(先运行脚本,在自行修改 frps.ini 文件.)
 安装
 ```shell
-wget https://raw.githubusercontent.com/stilleshan/frps/master/frps_linux_install.sh && chmod +x frps_linux_install.sh && ./frps_linux_install.sh
-# 国内 gitee 镜像
-wget https://gitee.com/stilleshan/frps/raw/master/frps_linux_install.sh && chmod +x frps_linux_install.sh && ./frps_linux_install.sh
+wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_install.sh && chmod +x frps_linux_install.sh && ./frps_linux_install.sh
 ```
 
 使用
@@ -28,11 +25,9 @@ sudo systemctl restart frps
 
 卸载
 ```shell
-wget https://raw.githubusercontent.com/stilleshan/frps/master/frps_linux_uninstall.sh && chmod +x frps_linux_uninstall.sh && ./frps_linux_uninstall.sh
-# 国内 gitee 镜像
-wget https://gitee.com/stilleshan/frps/raw/master/frps_linux_uninstall.sh && chmod +x frps_linux_uninstall.sh && ./frps_linux_uninstall.sh
-```
+wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_uninstall.sh && chmod +x frps_linux_uninstall.sh && ./frps_linux_uninstall.sh
 
+```
 
 ### 自定义一键脚本(先 fork 本仓库,在自行修改 frps.ini 文件后运行脚本.)
 > 同时支持 github 和 gitee 平台 fork
@@ -43,23 +38,19 @@ wget https://gitee.com/stilleshan/frps/raw/master/frps_linux_uninstall.sh && chm
 - 修改脚本链接并运行
 
 #### 修改 frps_linux_install.sh 脚本
-`FRP_VERSION="0.36.2"` 可根据原版项目更新自行修改为最新版本  
-`REPO="stilleshan/frps"` 由于 **fork** 到你自己的仓库,需修改`stilleshan`为你的 GitHub 或 gitee 账号ID.
+`FRP_VERSION="0.28.2"` 可根据原版项目更新自行修改为最新版本  
+`REPO="stilleshan/frps"` 由于 **fork** 到你自己的仓库,需修改`op2009`为你的 GitHub 账号ID.
 
 #### 运行一键脚本
 修改以下脚本链接中的`stilleshan`为你的 GitHub 或 gitee 账号ID后,运行即可.
 ```shell
-wget https://raw.githubusercontent.com/stilleshan/frps/master/frps_linux_install.sh && chmod +x frps_linux_install.sh && ./frps_linux_install.sh
-# 国内 gitee 镜像
-wget https://gitee.com/stilleshan/frps/raw/master/frps_linux_install.sh && chmod +x frps_linux_install.sh && ./frps_linux_install.sh
-```
+wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_install.sh && chmod +x frps_linux_install.sh && ./frps_linux_install.sh
+
 #### 卸载脚本
 frps_linux_uninstall.sh 卸载脚本为通用脚本,可直接运行,也可同上方式修改链接后运行.
 ```shell
-wget https://raw.githubusercontent.com/stilleshan/frps/master/frps_linux_uninstall.sh && chmod +x frps_linux_uninstall.sh && ./frps_linux_uninstall.sh
-# 国内 gitee 镜像
-wget https://gitee.com/stilleshan/frps/raw/master/frps_linux_uninstall.sh && chmod +x frps_linux_uninstall.sh && ./frps_linux_uninstall.sh
-```
+wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_uninstall.sh && chmod +x frps_linux_uninstall.sh && ./frps_linux_uninstall.sh
+
 
 ### frps相关命令
 ```shell
@@ -75,44 +66,7 @@ sudo systemctl stop frps
 # 停止服务
 ```
 
-### docker 部署
-为避免因 **frps.ini** 文件的挂载,格式或者配置的错误导致容器无法正常运行并循环重启.请确保先配置好 **frps.ini** 后在运行启动.
-
-先 **git clone** 本仓库,并正确配置 **frps.ini** 文件.
-```shell
-git clone https://github.com/stilleshan/frps.git
-# git clone 本仓库
-vi /root/frps/frps.ini
-# 配置 frps.ini 文件
-```
-自行使用 **-p** 参数映射服务端所需端口,执行以下命令启动服务.
-```shell
-docker run -d --name=frps --restart=always \
-    -v /root/frps/frps.ini:/frp/frps.ini  \
-    -p 80:80 \
-    -p 443:443 \
-    -p 7000:7000 \
-    -p 7500:7500 \
-    stilleshan/frps
-```
-> 以上命令 -v 挂载的目录是以 git clone 本仓库为例,也可以在任意位置手动创建 frps.ini 文件,并修改命令中的挂载路径.
-
-服务运行中修改 **frps.ini** 配置后需重启 **frps** 服务.
-```shell
-vi /root/frps/frps.ini
-# 修改 frps.ini 配置
-docker restart frps
-# 重启 frps 容器即可生效
-```
-
 ## 版本更新
 - latest 为最新版
 - Tags 为历史版本
-
-## 相关链接
-更多frp相关信息可参考我的博客
-- Blog [www.ioiox.com](https://www.ioiox.com)
-- GitHub [stilleshan/frps](https://github.com/stilleshan/frps)
-- Docker [stilleshan/frps](https://hub.docker.com/r/stilleshan/frps)
 - 原版frp项目 [fatedier/frp](https://github.com/fatedier/frp)
-- [CentOS 7 安装配置frp内网穿透服务器端教程](https://www.ioiox.com/archives/5.html)

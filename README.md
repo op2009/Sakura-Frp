@@ -34,7 +34,7 @@ wget https://raw.githubusercontent.com/op2009/Sakura-Frp/master/Sakura-Frp_linux
 
 - 首先 fork 本仓库
 - 配置 frps.ini
-- 修改 frps_linux_install.sh 脚本
+- 修改 Sakura-Frp_linux_install.sh 脚本
 - 修改脚本链接并运行
 
 #### 修改 Sakura-Frp_linux_install.sh 脚本

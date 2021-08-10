@@ -39,18 +39,18 @@ wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_uninstall.s
 
 #### 修改 frps_linux_install.sh 脚本
 `FRP_VERSION="0.28.2"` 可根据原版项目更新自行修改为最新版本  
-`REPO="stilleshan/frps"` 由于 **fork** 到你自己的仓库,需修改`op2009`为你的 GitHub 账号ID.
+`REPO="op2009/frps"` 由于 **fork** 到你自己的仓库,需修改`op2009`为你的 GitHub 账号ID.
 
 #### 运行一键脚本
-修改以下脚本链接中的`stilleshan`为你的 GitHub 或 gitee 账号ID后,运行即可.
+修改以下脚本链接中的`op2009`为你的 GitHub ,运行即可.
 ```shell
 wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_install.sh && chmod +x frps_linux_install.sh && ./frps_linux_install.sh
-
+```
 #### 卸载脚本
 frps_linux_uninstall.sh 卸载脚本为通用脚本,可直接运行,也可同上方式修改链接后运行.
 ```shell
 wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_uninstall.sh && chmod +x frps_linux_uninstall.sh && ./frps_linux_uninstall.sh
-
+```
 
 ### frps相关命令
 ```shell

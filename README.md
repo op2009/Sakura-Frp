@@ -1,13 +1,13 @@
 # Sakura-Frp 服务端 一键安装卸载脚本
 ## 项目简介
-基于 [fatedier/frp](https://github.com/fatedier/frp) 原版 frp 内网穿透服务端 frps 的一键安装卸载脚本支持 Linux 服务器等多种环境安装部署.
+- GitHub [ZeroDream-CN/SakuraFrp](https://github.com/ZeroDream-CN/SakuraFrp) 原版 SakuraFrp 内网穿透服务端 SakuraFrp 的一键安装卸载脚本支持 Linux 服务器等多种环境安装部署.
+> *support for X86 and ARM* 
 
-- GitHub [ZeroDream-CN/SakuraFrp](https://github.com/ZeroDream-CN/SakuraFrp)
-> *support for X86 and ARM*
+
 
 
 ## 使用说明
-由于 Sakura-Frp 服务端需要配置参数,本脚本为原版 frps.ini ,安装完毕后请自行编辑 frps.ini 配置端口,密码等相关参数并重启服务.同时你也可以 fork 本仓库后自行修改 frps.ini ,在进行一键安装也非常方便.后期也可自行配置 frps.ini 和调整 frps 的版本.
+由于 Sakura-Frp 服务端需要配置参数,本脚本为原版 frps.ini ,安装完毕后请自行编辑 frps.ini 配置端口,密码等相关参数并重启服务.同时你也可以 fork 本仓库后自行修改 frps.ini ,在进行一键安装也非常方便.后期也可自行配置 frps.ini 和调整 Sakura-Frp 的版本.
 
 ### 一键脚本(先运行脚本,在自行修改 frps.ini 文件.)
 安装

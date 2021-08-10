@@ -7,12 +7,12 @@
 
 
 ## 使用说明
-由于 frps 服务端需要配置参数,本脚本为原版 frps.ini ,安装完毕后请自行编辑 frps.ini 配置端口,密码等相关参数并重启服务.同时你也可以 fork 本仓库后自行修改 frps.ini ,在进行一键安装也非常方便.后期也可自行配置 frps.ini 和调整 frps 的版本.
+由于 Sakura-Frp 服务端需要配置参数,本脚本为原版 frps.ini ,安装完毕后请自行编辑 frps.ini 配置端口,密码等相关参数并重启服务.同时你也可以 fork 本仓库后自行修改 frps.ini ,在进行一键安装也非常方便.后期也可自行配置 frps.ini 和调整 frps 的版本.
 
 ### 一键脚本(先运行脚本,在自行修改 frps.ini 文件.)
 安装
 ```shell
-wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_install.sh && chmod +x frps_linux_install.sh && ./frps_linux_install.sh
+wget https://raw.githubusercontent.com/op2009/Sakura-Frp/master/Sakura-Frp_linux_install.sh && chmod +x Sakura-Frp_linux_install.sh && ./Sakura-Frp_linux_install.sh
 ```
 
 使用
@@ -25,7 +25,7 @@ sudo systemctl restart frps
 
 卸载
 ```shell
-wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_uninstall.sh && chmod +x frps_linux_uninstall.sh && ./frps_linux_uninstall.sh
+wget https://raw.githubusercontent.com/op2009/Sakura-Frp/master/Sakura-Frp_linux_uninstall.sh && chmod +x Sakura-Frp_linux_uninstall.sh && ./Sakura-Frp_linux_uninstall.sh
 
 ```
 
@@ -37,22 +37,22 @@ wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_uninstall.s
 - 修改 frps_linux_install.sh 脚本
 - 修改脚本链接并运行
 
-#### 修改 frps_linux_install.sh 脚本
+#### 修改 Sakura-Frp_linux_install.sh 脚本
 `FRP_VERSION="0.28.2"` 可根据原版项目更新自行修改为最新版本  
 `REPO="op2009/frps"` 由于 **fork** 到你自己的仓库,需修改`op2009`为你的 GitHub 账号ID.
 
 #### 运行一键脚本
 修改以下脚本链接中的`op2009`为你的 GitHub ,运行即可.
 ```shell
-wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_install.sh && chmod +x frps_linux_install.sh && ./frps_linux_install.sh
+wget https://raw.githubusercontent.com/op2009/Sakura-Frp/master/Sakura-Frp_linux_install.sh && chmod +x Sakura-Frp_linux_install.sh && ./Sakura-Frp_linux_install.sh
 ```
 #### 卸载脚本
-frps_linux_uninstall.sh 卸载脚本为通用脚本,可直接运行,也可同上方式修改链接后运行.
+Sakura-Frp_linux_uninstall.sh 卸载脚本为通用脚本,可直接运行,也可同上方式修改链接后运行.
 ```shell
-wget https://raw.githubusercontent.com/op2009/frps/master/frps_linux_uninstall.sh && chmod +x frps_linux_uninstall.sh && ./frps_linux_uninstall.sh
+wget https://raw.githubusercontent.com/op2009/Sakura-Frp/master/Sakura-Frp_linux_uninstall.sh && chmod +x Sakura-Frp_linux_uninstall.sh && ./Sakura-Frp_linux_uninstall.sh
 ```
 
-### frps相关命令
+### Sakura-Frp相关命令
 ```shell
 sudo systemctl start frps
 # 启动服务 

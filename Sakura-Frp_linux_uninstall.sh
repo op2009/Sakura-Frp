@@ -25,7 +25,7 @@ rm -rf ${FRP_PATH}
 rm -rf /lib/systemd/system/${FRP_NAME}.service
 sudo systemctl daemon-reload
 # 删除本文件
-rm -rf ${FRP_NAME}_linux_uninstall.sh
+rm -rf Sakura-Frp_linux_uninstall.sh
 
 echo -e "${Green}============================${Font}"
 echo -e "${Green}卸载成功,相关文件已清理完毕!${Font}"

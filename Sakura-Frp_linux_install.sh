@@ -52,8 +52,8 @@ wget -P ${WORK_PATH} https://github.com/ZeroDream-CN/SakuraFrp/releases/download
 tar -zxvf ${FILE_NAME}.tar.gz && \
 mv ${FILE_NAME}/${FRP_NAME} ${FRP_PATH}
 
-wget -P ${FRP_PATH} https://ghproxy.com/https://raw.githubusercontent.com/${REPO}/master/${FRP_NAME}.ini && \
-wget -P /lib/systemd/system https://ghproxy.com/https://raw.githubusercontent.com/${REPO}/master/${FRP_NAME}.service && \
+wget -P ${FRP_PATH} https://mirror.ghproxy.com/https://raw.githubusercontent.com/${REPO}/master/${FRP_NAME}.ini && \
+wget -P /lib/systemd/system https://mirror.ghproxy.com/https://raw.githubusercontent.com/${REPO}/master/${FRP_NAME}.service && \
 
 systemctl daemon-reload
 sudo systemctl start ${FRP_NAME}

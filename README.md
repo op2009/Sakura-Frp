@@ -17,8 +17,8 @@ wget https://raw.githubusercontent.com/op2009/Sakura-Frp/master/Sakura-Frp_linux
 
 使用
 ```shell
-vi /usr/local/frp/frps.ini
-# 修改 frps.ini 配置
+vi /usr/local/frp/frps.toml
+# 修改 frps.toml 配置
 sudo systemctl restart frps
 # 重启 frps 服务即可生效
 ```
@@ -33,12 +33,12 @@ wget https://raw.githubusercontent.com/op2009/Sakura-Frp/master/Sakura-Frp_linux
 > 同时支持 github 和 gitee 平台 fork
 
 - 首先 fork 本仓库
-- 配置 frps.ini
+- 配置 frps.toml
 - 修改 Sakura-Frp_linux_install.sh 脚本
 - 修改脚本链接并运行
 
 #### 修改 Sakura-Frp_linux_install.sh 脚本
-`FRP_VERSION="0.28.2"` 可根据原版项目更新自行修改为最新版本  
+`FRP_VERSION="0.60.00"` 可根据原版项目更新自行修改为最新版本  
 `REPO="op2009/frps"` 由于 **fork** 到你自己的仓库,需修改`op2009`为你的 GitHub 账号ID.
 
 #### 运行一键脚本

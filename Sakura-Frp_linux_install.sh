@@ -48,7 +48,7 @@ while ! test -z "$(ps -A | grep -w ${FRP_NAME})"; do
 done
 
 mkdir -p ${FRP_PATH}
-wget -P ${WORK_PATH} https://github.com/ZeroDream-CN/SakuraFrp/releases/download/v${FRP_VERSION}/${FILE_NAME}.tar.gz -O ${FILE_NAME}.tar.gz && \
+wget -P ${WORK_PATH} https://github.com/op2009/Sakura-Frp/releases/tag/v${FRP_VERSION}/${FILE_NAME}.tar.gz -O ${FILE_NAME}.tar.gz && \
 tar -zxvf ${FILE_NAME}.tar.gz && \
 mv ${FILE_NAME}/${FRP_NAME} ${FRP_PATH}
 

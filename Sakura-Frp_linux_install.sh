@@ -28,7 +28,7 @@ fi
 FILE_NAME=frp_${FRP_VERSION}_linux_${PLATFORM}
 
 # 判断是否安装 frps
-if [ -f "/usr/local/frp/${FRP_NAME}" ] || [ -f "/usr/local/frp/${FRP_NAME}.ini" ] || [ -f "/lib/systemd/system/${FRP_NAME}.service" ];then
+if [ -f "/usr/local/frp/${FRP_NAME}" ] || [ -f "/usr/local/frp/${FRP_NAME}.toml" ] || [ -f "/lib/systemd/system/${FRP_NAME}.service" ];then
     echo -e "${Green}=========================================================================${Font}"
     echo -e "${RedBG}当前已退出脚本.${Font}"
     echo -e "${Green}检查到服务器已安装${Font} ${Red}${FRP_NAME}${Font}"
